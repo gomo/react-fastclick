@@ -46,14 +46,19 @@
 
       var handleType = {
         input: function (event) {
+          if(event.currentTarget.getAttribute('type') == 'text'){
+            event.preventDefault();
+          }
           focus(event);
           event.stopPropagation();
         },
         textarea: function (event) {
+          event.preventDefault();
           focus(event);
           event.stopPropagation();
         },
         select: function (event) {
+          event.preventDefault();
           focus(event);
           event.stopPropagation();
         },
