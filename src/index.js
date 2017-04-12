@@ -173,6 +173,7 @@
 
             if (!isDisabled(event.currentTarget)) {
               if (typeof onClick === 'function') {
+                event.preventDefault();
                 copyTouchKeys(touchEvents.lastPos, event);
                 fakeClickEvent(event);
                 onClick(event);
